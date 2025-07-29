@@ -1,36 +1,23 @@
 import React from 'react'
-import Person from './components/Person'
-import Mobile from './components/Mobile'
-import Counter  from './components/Counter'
-import Map from './components/Map'
-import Filter  from './components/Filter'
-import UseEffect from './components/UseEffect'
-import FetchdataFromAPI from './components/FetchdataFromAPI'
-import HandleForm from './components/HandleForm'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Home from './pages/Home'
+import About from './pages/About'
+import Team from './pages/Team'
+import Contact from './pages/Contact'
+import Navbar from './components/Navbar'
 
 const App = () => {
-  const handleClick = ()=> {
-    alert("Button was Clicked..!")
-  };
-
-
   return (
-    <>
-    {/* <Person name="Ram" age={200}/>
-    <Person name="Sham" age={100}/>
-    <Person name="Aam" age={150}/>
-
-    <button onMouseOver={handleClick}>click me</button> */}
-
-    {/* <Counter/> */}
-
-      {/* <Map/> */}
-      {/* <Filter/> */}
-      {/* <UseEffect/> */}
-      {/* <FetchdataFromAPI/> */}
-      <HandleForm/>
-    </>
+    <Router>
+      <Navbar/>
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/team' element={<Team />} />
+        <Route path='/contact' element={<Contact />} />
+      </Routes>
+    </Router>
   )
-}  
+}
 
 export default App
