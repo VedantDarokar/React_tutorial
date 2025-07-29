@@ -1,19 +1,36 @@
 import React from 'react'
+import Person from './components/Person'
+import Mobile from './components/Mobile'
+import Counter  from './components/Counter'
+import Map from './components/Map'
+import Filter  from './components/Filter'
+import UseEffect from './components/UseEffect'
+import FetchdataFromAPI from './components/FetchdataFromAPI'
+import HandleForm from './components/HandleForm'
 
 const App = () => {
+  const handleClick = ()=> {
+    alert("Button was Clicked..!")
+  };
 
-  const name = 'Vedant'
-  const name2 = 'Laxman'
 
   return (
     <>
-      <div>
-        <h1>My name is {name}</h1>
-        <h1>{name2}</h1>
-      </div>
-      <h1>Welcome to the React Course</h1>
+    {/* <Person name="Ram" age={200}/>
+    <Person name="Sham" age={100}/>
+    <Person name="Aam" age={150}/>
+
+    <button onMouseOver={handleClick}>click me</button> */}
+
+    {/* <Counter/> */}
+
+      {/* <Map/> */}
+      {/* <Filter/> */}
+      {/* <UseEffect/> */}
+      {/* <FetchdataFromAPI/> */}
+      <HandleForm/>
     </>
   )
-}
+}  
 
 export default App
